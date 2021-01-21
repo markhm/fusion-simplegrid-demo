@@ -1,0 +1,17 @@
+.header_or_footer {
+    background-color: antiquewhite;
+}
+
+.cell {
+    text-align: center;
+}
+
+.style_1 {
+    background-color: antiquewhite;
+    color: white;
+}
+
+.style_2 {
+    background-color: olive;
+    color: white;
+}
