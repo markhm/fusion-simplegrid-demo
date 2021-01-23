@@ -2,7 +2,7 @@ import {css, customElement, html, LitElement, property} from 'lit-element';
 import {CSSModule} from '@vaadin/flow-frontend/css-utils';
 
 // should not be needed because of the global import in index.ts
-// import '../../styles/simplegrid-styles';
+// import '../../styles/shared-styles';
 
 @customElement('simplegrid-view')
 export class SimplegridView extends LitElement {
@@ -19,11 +19,16 @@ export class SimplegridView extends LitElement {
           display: block;
           padding: 1em;
         }
+        
     `];
   }
 
+  // <style include="shared-styles"></style>
+
   render() {
     return html`
+      <div class="testing">This is a test.</div>
+      
       <div class="header_or_footer">
         <div class="container">
           <div class="row">
