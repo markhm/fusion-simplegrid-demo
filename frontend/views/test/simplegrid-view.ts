@@ -1,6 +1,9 @@
 import {css, customElement, html, LitElement, property} from 'lit-element';
 import {CSSModule} from '@vaadin/flow-frontend/css-utils';
 
+// should not be needed because of the global import in index.ts
+// import '../../styles/simplegrid-styles';
+
 @customElement('simplegrid-view')
 export class SimplegridView extends LitElement {
 
