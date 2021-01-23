@@ -21,9 +21,15 @@ export class SimplegridView extends LitElement {
 
   render() {
     return html`
-      <h3>Simplegrid</h3>
-      <div>test</div>
-
+      <div class="header_or_footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12-sm">
+              <h1>Header</h1>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-12-sm">
@@ -48,6 +54,16 @@ export class SimplegridView extends LitElement {
           </div>
           <div class="col-4 col-6-sm cell style_2">
             <h2>Cell 6</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="header_or_footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12-sm">
+              <h1>Footer</h1>
+            </div>
           </div>
         </div>
       </div>
