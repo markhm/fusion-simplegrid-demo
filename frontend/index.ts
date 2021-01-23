@@ -1,5 +1,6 @@
 import { Router } from '@vaadin/router';
 import { routes } from './routes';
+
 import './styles/simplegrid-styles';
 import './styles/shared-styles';
 
