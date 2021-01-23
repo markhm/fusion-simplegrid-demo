@@ -14,7 +14,7 @@ export const routes = [
     },
     children: [
       {
-        path: 'test/simplegrid',
+        path: '',
         component: 'simplegrid-view',
         action: async () => {
           await import('./views/test/simplegrid-view');
