@@ -7,7 +7,6 @@ const $_documentContainer = document.createElement('template');
 
 $_documentContainer.innerHTML = `<custom-style>
   <style>
-    html {
       /* UNIVERSAL */
     html,
     body {
