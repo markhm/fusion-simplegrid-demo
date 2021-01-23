@@ -1,9 +1,5 @@
-import {css, customElement, html, LitElement, property, unsafeCSS} from 'lit-element';
+import {css, customElement, html, LitElement, property} from 'lit-element';
 import {CSSModule} from '@vaadin/flow-frontend/css-utils';
-
-// import { ElementMixin } from '@vaadin/vaadin-element-mixin';
-import {DomModule} from "@polymer/polymer/lib/elements/dom-module";
-import {stylesFromTemplate} from "@polymer/polymer/lib/utils/style-gather";
 
 @customElement('simplegrid-view')
 export class SimplegridView extends LitElement {
@@ -15,7 +11,6 @@ export class SimplegridView extends LitElement {
     return [
       CSSModule('lumo-typography'),
       CSSModule('lumo-color'),
-      CSSModule('lumo-badge'),
       css`
         :host {
           display: block;
@@ -23,8 +18,6 @@ export class SimplegridView extends LitElement {
         }
     `];
   }
-
-
 
   render() {
     return html`
@@ -64,25 +57,5 @@ export class SimplegridView extends LitElement {
 
   async connectedCallback() {
     super.connectedCallback();
-
-    const importedCss = this.importSimplegrid('simple-grid.scss');
-    console.log('importedCss: '+importedCss);
-  }
-
-  private importSimplegrid(filename: string) {
-
-    const template: HTMLTemplateElement | null = DomModule.import(filename, "template") as HTMLTemplateElement;
-
-    console.log('template: ' + template);
-
-    const cssText =
-        template &&
-        stylesFromTemplate(template, "./simplegrid/")
-            .map((style: HTMLStyleElement) => style.textContent)
-            .join(" ");
-
-    console.log('cssText: ' + cssText);
-
-    return unsafeCSS(cssText);
   }
 }
