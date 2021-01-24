@@ -16,7 +16,7 @@ interface MenuTab {
 export class MainView extends LitElement {
   @property({ type: Object }) location = router.location;
 
-  @property({ type: Array }) menuTabs: MenuTab[] = [{ route: 'test/simplegrid', name: 'Simplegrid demo' }];
+  @property({ type: Array }) menuTabs: MenuTab[] = [{ route: '', name: 'Simplegrid demo' }];
 
   @property({ type: String }) projectName = '';
 
