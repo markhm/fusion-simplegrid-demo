@@ -2,15 +2,6 @@ import {css, customElement, html, LitElement, property} from 'lit-element';
 // import { customElement, html, LitElement, property} from 'lit-element';
 import {CSSModule} from '@vaadin/flow-frontend/css-utils';
 
-
-// @ts-ignore
-import sharedStyles from '../../styles/shared-styles.js';
-// @ts-ignore
-// import exportedSharedStyles from '../../styles/exported-shared-styles.js';
-
-// should not be needed because of the global import in index.ts
-// import '../../styles/shared-styles';
-
 @customElement('simplegrid-view')
 export class SimplegridView extends LitElement {
 
@@ -26,15 +17,11 @@ export class SimplegridView extends LitElement {
           display: block;
           padding: 1em;
         }
-
     `];
   }
 
-  // <style include="shared-styles"></style>
-
   render() {
     return html`
-      ${sharedStyles}
       <div class="testing">This is a test.</div>
       
       <div class="header_or_footer">
