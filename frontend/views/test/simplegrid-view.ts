@@ -2,23 +2,14 @@ import {css, customElement, html, LitElement, property} from 'lit-element';
 // import { customElement, html, LitElement, property} from 'lit-element';
 import {CSSModule} from '@vaadin/flow-frontend/css-utils';
 
+import { sharedStyles } from '../../styles/shared-styles';
+import { simplegridStyles } from '../../styles/simplegrid-styles';
+
 @customElement('simplegrid-view')
 export class SimplegridView extends LitElement {
 
   @property()
   title: string = '';
-
-  static get styles() {
-    return [
-      CSSModule('lumo-typography'),
-      CSSModule('lumo-color'),
-      css`
-        :host {
-          display: block;
-          padding: 1em;
-        }
-    `];
-  }
 
   render() {
     return html`
@@ -76,5 +67,19 @@ export class SimplegridView extends LitElement {
 
   async connectedCallback() {
     super.connectedCallback();
+  }
+
+  static get styles() {
+    return [
+      sharedStyles,
+      simplegridStyles,
+      CSSModule('lumo-typography'),
+      CSSModule('lumo-color'),
+      css`
+        :host {
+          display: block;
+          padding: 1em;
+        }
+    `];
   }
 }
